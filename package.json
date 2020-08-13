@@ -1,0 +1,22 @@
+{
+  "name": "authentication-system",
+  "version": "1.0.0",
+  "description": "complete authentication system which can be used as a starter code for creating any",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humblejumbo/Authentication-System.git"
+  },
+  "author": "Shubham Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humblejumbo/Authentication-System/issues"
+  },
+  "homepage": "https://github.com/humblejumbo/Authentication-System#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
