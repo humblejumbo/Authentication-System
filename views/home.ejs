@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  
+</head>
+
+<body> 
+
+    <div class="container">
+
+        <!-- SETTING FLASH MESSAGES -->
+        <% if(error && error.length>0 ) {%>
+        <div class="alert alert-danger message" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+        <% if(success && success.length>0) {%>
+        <div class="alert alert-success message" id=role="alert">
+            <%= success %>
+        </div>
+        <% } %>
+
+    </div>
+
+
+<div class="form-row pull-right">
+    <button type="button" class="btn btn-link">Signed as <%=locals.user.name%> </button>
+    <a class="btn btn-link" href="/reset-password" role="button">Reset Password</a>
+    <form action="/signout" method="post">
+        <input class="btn btn-primary" type="submit" value="SignOut!">
+    </form>
+</div>
+
+
+<%- include('./partials/footer.ejs') %>

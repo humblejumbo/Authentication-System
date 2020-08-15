@@ -1,0 +1,73 @@
+<%- include('./partials/header.ejs') %>
+
+
+<div class="login-form">
+    <form action="/create-user" method="post">
+        <h2 class="text-center">Sign up - It's Free ;)</h2>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-user"></span>
+                    </span>
+                </div>
+                <input type="text" class="form-control" name="name" placeholder="Your Name" required="required">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <span class="fa fa-envelope"></span>
+                    </span>
+                </div>
+                <input type="email" class="form-control" name="email" placeholder="joedoe@domain.com"
+                    required="required">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <input type="password" class="form-control" name="password" placeholder="Password"
+                    required="required">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary login-btn btn-block">Sign Up</button>
+        </div>
+
+        <div class="clearfix">
+            <label class="float-left form-check-label"><input type="checkbox"> Remember me</label>
+        </div>
+
+        <div class="or-seperator"><i>or</i></div>
+        <p class="text-center">Signup with your social media account</p>
+        <div class="text-center social-btn">
+
+            <a href="/auth/google" class="btn btn-danger"><i class="fa fa-google"></i>&nbsp; Google</a>
+        </div>
+
+    </form>
+    <p class="text-center text-muted small">Already have a account? <a href="/signin">Sign in here!</a></p>
+</div>
+
+<%- include('./partials/footer.ejs') %>
